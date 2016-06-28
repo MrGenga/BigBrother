@@ -28,7 +28,7 @@ use pocketmine\plugin\PluginBase;
 use shoghicp\BigBrother\network\Info as MCInfo;
 use shoghicp\BigBrother\network\ProtocolInterface;
 use shoghicp\BigBrother\network\ServerThread;
-use shoghicp\BigBrother\network\translation\Translator_70;
+use shoghicp\BigBrother\network\translation\Translator_81;
 use shoghicp\BigBrother\tasks\GeneratePrivateKey;
 
 class BigBrother extends PluginBase implements Listener{

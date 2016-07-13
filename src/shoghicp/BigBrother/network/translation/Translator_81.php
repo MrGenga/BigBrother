@@ -232,6 +232,18 @@ class Translator_81 implements Translator{
 				$pk->spawnY = $packet->y;
 				$pk->spawnZ = $packet->z;
 				return $pk;
+				
+			case Info::DISCONNECT_PACKET:
+				if($player->bigBrother_status === 0){
+					$pk = new LoginDisconnectPacket();
+					$pk->reason = TextFormat::toJSON($packet->messgae === "" ? "You have been disconnected." : $packet->message);
+					return $pk;
+				}else{
+					$pk = new PlayDisconnectPacket();
+					$pk->reason = TextFormat::toJSON($packet->message === "" ? "You have been disconnected." : $packet->message);
+					return $pk;
+				}
+				break;
 
 			case Info::REMOVE_ENTITY_PACKET:
 			case Info::REMOVE_PLAYER_PACKET:

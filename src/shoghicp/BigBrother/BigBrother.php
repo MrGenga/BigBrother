@@ -79,7 +79,7 @@ class BigBrother extends PluginBase implements Listener{
 		}
 
 		if(Info::CURRENT_PROTOCOL === 81){
-			$this->translator = new Translator_70();
+			$this->translator = new Translator_81();
 		}else{
 			$this->getLogger()->critical("Couldn't find a protocol translator for #".Info::CURRENT_PROTOCOL .", disabling plugin");
 			$this->getPluginLoader()->disablePlugin($this);

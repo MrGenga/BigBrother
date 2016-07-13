@@ -58,7 +58,7 @@ use shoghicp\BigBrother\utils\Binary;
 
 class DesktopPlayer extends Player{
 
-	private $bigBrother_status = 0; //0 = log in, 1 = playing
+	public $bigBrother_status = 0; //0 = log in, 1 = playing
 	protected $bigBrother_uuid;
 	protected $bigBrother_formatedUUID;
 	protected $bigBrother_properties = [];

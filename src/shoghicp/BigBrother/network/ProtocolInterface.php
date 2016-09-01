@@ -20,6 +20,7 @@ namespace shoghicp\BigBrother\network;
 use pocketmine\network\protocol\DataPacket;
 use pocketmine\network\SourceInterface;
 use pocketmine\Player;
+use pocketmine\network;
 use pocketmine\utils\TextFormat;
 use shoghicp\BigBrother\BigBrother;
 use shoghicp\BigBrother\DesktopPlayer;
@@ -61,7 +62,7 @@ class ProtocolInterface implements SourceInterface{
 		$this->plugin = $plugin;
 		$this->translator = $translator;
 		$this->thread = $thread;
-		$this->sessions = new SplObjectStorage();
+		$this->sessions = new \SplObjectStorage();
 	}
 
 	public function emergencyShutdown(){

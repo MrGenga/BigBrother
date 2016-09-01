@@ -19,9 +19,9 @@ namespace shoghicp\BigBrother\network\protocol;
 
 use shoghicp\BigBrother\network\Packet;
 use pocketmine\event\block;
-use pocketmine\network\protocol\BlockEventPacket as BEP;
+use pocketmine\network\protocol\BlockEventPacket;
 
-class BlockChangePacket extends Packet, BEP{
+class BlockChangePacket extends Packet{
 
 	public $x;
 	public $y;

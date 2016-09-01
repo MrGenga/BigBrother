@@ -61,7 +61,7 @@ class ProtocolInterface implements SourceInterface{
 		$this->plugin = $plugin;
 		$this->translator = $translator;
 		$this->thread = $thread;
-		$this->sessions = new \SplObjectStorage();
+		$this->sessions = new SplObjectStorage();
 	}
 
 	public function emergencyShutdown(){

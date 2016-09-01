@@ -172,9 +172,9 @@ class DesktopPlayer extends Player{
 				$this->server->broadcastMessage($ev->getJoinMessage());
 			}
 			$this->spawnToAll();
-			if($this->server->getUpdater()->hasUpdate() and $this->hasPermission(Server::BROADCAST_CHANNEL_ADMINISTRATIVE)){
+			/*$this->server->getUpdater()->hasUpdate() and $this->hasPermission(Server::BROADCAST_CHANNEL_ADMINISTRATIVE)){
 				$this->server->getUpdater()->showPlayerUpdate($this);
-			}
+			}*/
 		}
 		Timings::$playerChunkSendTimer->stopTiming();
 	}

@@ -21,8 +21,7 @@ use shoghicp\BigBrother\network\Packet;
 use pocketmine\event\block;
 use pocketmine\network\protocol\BlockEventPacket as BEP;
 
-class BlockChangePacket extends Packet, BEP
-{
+class BlockChangePacket extends Packet, BEP{
 
 	public $x;
 	public $y;

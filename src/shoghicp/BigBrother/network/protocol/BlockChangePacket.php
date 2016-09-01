@@ -20,6 +20,7 @@ namespace shoghicp\BigBrother\network\protocol;
 use shoghicp\BigBrother\network\Packet;
 use pocketmine\event\block;
 use pocketmine\network\protocol\BlockEventPacket;
+use pocketmine\network\protocol\UpdateBlockPacket;
 
 class BlockChangePacket extends Packet{
 

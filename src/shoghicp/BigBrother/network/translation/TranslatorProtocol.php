@@ -584,9 +584,9 @@ class TranslatorProtocol implements Translator{
 			case Info::UPDATE_BLOCK_PACKET:
 				$pk = new BlockChangePacket();
 				$count = count($packet->records) - 1;
-				$pk->x = $packet->records($count[0]);
-				$pk->y = $packet->records($count[2]);
-				$pk->z = $packet->records($count[1]);
+				$pk->x = $packet->records[$count][0];
+				$pk->y = $packet->records[$count][2];
+				$pk->z = $packet->records[$count][1];
 				$pk->blockId = $packet->records[$count][3];
 				$pk->blockMeta = $packet->records[$count][4];
 				return $pk;

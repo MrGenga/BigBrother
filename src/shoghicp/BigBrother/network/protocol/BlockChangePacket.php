@@ -18,8 +18,11 @@
 namespace shoghicp\BigBrother\network\protocol;
 
 use shoghicp\BigBrother\network\Packet;
+use pocketmine\event\block;
+use pocketmine\network\protocol\BlockEventPacket as BEP;
 
-class BlockChangePacket extends Packet{
+class BlockChangePacket extends Packet, BEP
+{
 
 	public $x;
 	public $y;
@@ -33,7 +36,7 @@ class BlockChangePacket extends Packet{
 
 	public function encode(){
 		$this->putPosition($this->x, $this->y, $this->z);
-		$this->putVarInt(($this->blockId << 4) | $this->blockMeta);
+		$this->putVarInt(($this->blockId << 4) || $this->blockMeta);
 	}
 
 	public function decode(){
